@@ -7,7 +7,6 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
 }
-// Handle search functionality
 if (isset($_POST['search'])) {
     $name = trim($_POST['name']);
     if (!empty($name)) {
@@ -36,7 +35,6 @@ if (isset($_POST['filter'])) {
     }
 }
 
-// Handle delete functionality
 if (isset($_POST['delete_id'])) {
     $id = $_POST['delete_id'];
     if (etudiant::getEtudiant($id)) {
