@@ -3,7 +3,7 @@ session_start();
 require_once 'section.php';
 Section::getinstance();
 
-/*
+
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
@@ -13,7 +13,7 @@ if ($_SESSION['role'] !== 'admin') {
     http_response_code(403); 
     die("Access Denied: You don't have permission to view this page.");
 }
-*/
+
 $error = '';
 $success = '';
 $id = $_GET['id'];
